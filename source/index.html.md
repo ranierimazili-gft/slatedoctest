@@ -17,15 +17,13 @@ includes:
 search: true
 ---
 
-# Introduction
+# Introdução
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
-
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+Bem-vindo a documentação das api's de Open Banking do Brasil.
 
 This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
-# Authentication
+# Autenticação
 
 > To authorize, use this code:
 
@@ -55,19 +53,22 @@ let api = kittn.authorize('meowmeowmeow');
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+As APIs utilizam a client_id e secret para permitir o acesso. Para obter uma suas credencias de acesso as APIs, utilize o [developer portal](http://example.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+As APIs esperam que as credenciais sejam enviadas via header conforme exemplo abaixo:
 
-`Authorization: meowmeowmeow`
+`client_id: meowmeowmeow`
+
+`secret: meowmeowmeow`
+
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Você deve substituir <code>meowmeowmeow</code> pelas suas credenciais.
 </aside>
 
-# Kittens
+# Canais de Atendimento
 
-## Get All Kittens
+## Obter todos canais de atendimento
 
 ```ruby
 require 'kittn'
@@ -116,11 +117,11 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+Este endpoint recupera todos os canais de atendimento.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET /branches`
 
 ### Query Parameters
 
@@ -236,4 +237,6 @@ This endpoint deletes a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
+
+# Schemas
 
